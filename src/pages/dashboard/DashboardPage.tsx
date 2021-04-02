@@ -1,7 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import RainImage from './../../images/weather/rain.webp';
+import MenuImage from './../../images/icons/menu.svg';
+import ExitImage from './../../images/icons/exit.svg';
+import { colors } from '../../utils/theme/colors';
+import { IDirections } from '../../utils/enums/directions';
 import { UnstyledLink } from '../../utils/components/UnstyledLink';
-import { fadeIn, slideToWithFadeIn } from './../../helpers/animations';
+import { fadeIn, slideToWithFadeIn, tapEffect } from './../../helpers/animations';
 import {
   Page,
   Header,
@@ -15,16 +20,19 @@ import {
   SliderItem,
   SliderList,
 } from './DashboardPage.styles';
-import { IDirections } from '../../utils/enums/directions';
 
 export const DashboardPage = () => {
   return (
     <Page>
       <Header {...fadeIn(0.5)}>
         <Toolbar>
-          <ToolbarButton {...fadeIn(1)}>Menu</ToolbarButton>
+          <ToolbarButton {...tapEffect(colors.primaryDarker)} {...fadeIn(1)}>
+            <img src={MenuImage} />
+          </ToolbarButton>
           <UnstyledLink to="/">
-            <ToolbarButton {...fadeIn(1)}>Sair</ToolbarButton>
+            <ToolbarButton {...tapEffect(colors.primaryDarker)} {...fadeIn(1)}>
+              <img src={ExitImage} />
+            </ToolbarButton>
           </UnstyledLink>
         </Toolbar>
         <Summary>
@@ -34,7 +42,7 @@ export const DashboardPage = () => {
             <motion.p {...fadeIn(1)}>Rua dos Maias, Porto Alegre</motion.p>
           </UserInfo>
           <WeatherInfo {...fadeIn(1.5)}>
-            <p>Imagem de chuva</p>
+            <img src={RainImage} />
             <p>Chuvoso</p>
           </WeatherInfo>
         </Summary>

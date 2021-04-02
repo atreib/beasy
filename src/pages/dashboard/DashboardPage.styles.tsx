@@ -22,14 +22,18 @@ export const Toolbar = styled.div`
   justify-content: space-between;
 
   ${ToolbarButton} {
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 1.5rem;
+    height: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: invert(1);
+    }
   }
 `;
 
@@ -65,9 +69,18 @@ export const Summary = styled.div`
   ${WeatherInfo} {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: flex-end;
+
+    p {
+      margin: 0;
+      margin-top: 0.1rem;
+    }
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+    }
   }
 `;
 
