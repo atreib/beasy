@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const colors = {
   primary: '#FB0061',
@@ -80,7 +81,7 @@ export const ColumnRight = styled.div`
   overflow: hidden;
 `;
 
-export const Image = styled.img`
+export const Image = styled(motion.img)`
   position: absolute;
   max-width: 300px;
   max-height: auto;
