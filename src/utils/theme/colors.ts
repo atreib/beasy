@@ -1,3 +1,8 @@
+/**
+ * Theme main colors
+ * * primary: pink
+ * * complementary: lime green
+ */
 export const colors = {
   primary: '#FB0061',
   complementary: '#87FC00',

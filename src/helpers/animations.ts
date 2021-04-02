@@ -1,7 +1,12 @@
 import { IDirections } from '../utils/enums/directions';
 import { NumberDictionary } from '../utils/protocols/number-dictionary';
 
-export const slideAndFade = (direction: IDirections) => {
+/**
+ * Generates a option object from Framer Motion for sliding while fading in
+ * @param direction (IDirections) the direction that the element should go
+ * @returns Framer Motion options for animating a slide to the direction while fading in
+ */
+export const slideToWithFadeIn = (direction: IDirections) => {
   const hidden: NumberDictionary = { opacity: 0 };
   const visible: NumberDictionary = { opacity: 1 };
 
