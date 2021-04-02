@@ -6,6 +6,7 @@ import { Section, Container, ColumnLeft, Button, ColumnRight, Image } from './Ho
 import { slideToWithFadeIn, tapEffect, fadeIn } from './../../helpers/animations';
 import { IDirections } from '../../utils/enums/directions';
 import { colors } from '../../utils/theme/colors';
+import { UnstyledLink } from '../../utils/components/UnstyledLink';
 
 /**
  * Start/welcome page component
@@ -26,9 +27,11 @@ export const HomePage = () => {
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
               Encontre o seu caminho
             </motion.p>
-            <Button {...fadeIn(1)} {...tapEffect(colors.primaryDarker)}>
-              Acessar
-            </Button>
+            <UnstyledLink to="/dashboard">
+              <Button {...fadeIn(1)} {...tapEffect(colors.primaryDarker)}>
+                Acessar
+              </Button>
+            </UnstyledLink>
           </ColumnLeft>
           <ColumnRight>
             <Image {...slideToWithFadeIn(IDirections.FromLeft, 1)} src={BackgroundBusImage} alt="bus" />

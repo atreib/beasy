@@ -12,4 +12,9 @@ export const AppRoutes: Array<RoutesModel> = [
     component: React.lazy(() => import('./../pages/home/HomePage')),
     title: 'Início',
   },
+  {
+    path: '/dashboard',
+    component: React.lazy(() => import('./../pages/dashboard/DashboardPage')),
+    title: 'Dashboard',
+  },
 ];
