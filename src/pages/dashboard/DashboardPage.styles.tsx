@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { colors } from '../../utils/theme/colors';
 
 export const Page = styled.div`
@@ -6,7 +7,7 @@ export const Page = styled.div`
   height: 100%;
 `;
 
-export const Header = styled.header`
+export const Header = styled(motion.header)`
   padding: 1rem;
   background-color: ${colors.primary};
   color: ${colors.primaryContrast};
@@ -15,7 +16,7 @@ export const Header = styled.header`
   border-bottom-right-radius: 100% 30%;
 `;
 
-export const ToolbarButton = styled.div``;
+export const ToolbarButton = styled(motion.div)``;
 export const Toolbar = styled.div`
   display: flex;
   justify-content: space-between;
@@ -33,7 +34,7 @@ export const Toolbar = styled.div`
 `;
 
 export const UserInfo = styled.div``;
-export const WeatherInfo = styled.div``;
+export const WeatherInfo = styled(motion.div)``;
 export const Summary = styled.div`
   display: flex;
   justify-content: space-between;
@@ -70,9 +71,9 @@ export const Summary = styled.div`
   }
 `;
 
-export const SliderHeader = styled.h2``;
+export const SliderHeader = styled(motion.h2)``;
 export const SliderList = styled.div``;
-export const SliderItem = styled.div``;
+export const SliderItem = styled(motion.div)``;
 export const Slider = styled.section`
   margin: 2rem 0;
 
