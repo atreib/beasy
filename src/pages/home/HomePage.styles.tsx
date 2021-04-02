@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const colors = {
+export const colors = {
   primary: '#FB0061',
   complementary: '#87FC00',
   primaryDarker: '#B20045',
@@ -35,7 +35,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Button = styled.div``;
+export const Button = styled(motion.div)``;
 export const ColumnLeft = styled.div`
   display: flex;
   color: ${colors.white};
