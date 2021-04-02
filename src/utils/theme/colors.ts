@@ -10,8 +10,9 @@ export const colors = {
   complementaryDarker: '#64BA00',
   primaryLighter: '#FE287B',
   complementaryLighter: '#9BFE28',
-  primaryContrast: '#000000',
+  primaryContrast: '#FBFBFB',
   complementarContrast: '#FBFBFB',
   black: '#000000',
-  white: '#FBFBFB',
+  white: '#FAFAFA',
+  background: '#F5F5F5',
 };
