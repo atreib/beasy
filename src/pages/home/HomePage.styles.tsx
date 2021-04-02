@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { colors } from '../../utils/theme/colors';
 
 export const Section = styled.section`
-  height: 100vh;
+  height: 100%;
   display: flex;
   jusitfy-content: center;
   align-items: center;
@@ -12,15 +12,10 @@ export const Section = styled.section`
 `;
 
 export const Container = styled.div`
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
-  padding: 3rem calc((100vw - 1200px) / 2);
   overflow: hidden;
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-  }
 `;
 
 export const Button = styled(motion.div)``;
