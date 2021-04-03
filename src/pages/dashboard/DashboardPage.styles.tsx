@@ -97,7 +97,7 @@ export const QuickButton = styled(motion.div)`
   border-radius: 50%;
   width: 10vw;
   max-width: 5vw;
-  max-height: 10vw;
+  max-height: 5vw;
   border: 1px solid ${colors.complementaryDarker};
   color: ${colors.complementaryDarker};
 
