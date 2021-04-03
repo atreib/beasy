@@ -64,14 +64,18 @@ export const DashboardPage = () => {
             <img src={SettingsImage} />
           </div>
         </QuickButton>
-        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
-          <div>
-            <img src={QuestionImage} />
-          </div>
-        </QuickButton>
-        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
-          <img src={ExitImage} />
-        </QuickButton>
+        <UnstyledLink to="/faq">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <div>
+              <img src={QuestionImage} />
+            </div>
+          </QuickButton>
+        </UnstyledLink>
+        <UnstyledLink to="/">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <img src={ExitImage} />
+          </QuickButton>
+        </UnstyledLink>
       </QuickAccess>
       <Slider>
         <SliderHeader {...fadeIn(0.5)}>Trajetos favoritos</SliderHeader>
