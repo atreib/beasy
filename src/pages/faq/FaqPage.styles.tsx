@@ -8,7 +8,7 @@ export const Page = styled.div`
 `;
 
 export const Header = styled(motion.header)`
-  padding: 1rem 0 0 0;
+  padding: 1rem 1rem 0 1rem;
   height: 20vh;
   background-color: ${colors.primary};
   color: ${colors.primaryContrast};
@@ -44,7 +44,7 @@ export const Summary = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 
   ${TitleLabel} {
     h1 {
