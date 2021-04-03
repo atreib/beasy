@@ -54,16 +54,20 @@ export const DashboardPage = () => {
         </Summary>
       </Header>
       <QuickAccess>
-        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
-          <div>
-            <img src={SearchImage} />
-          </div>
-        </QuickButton>
-        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
-          <div>
-            <img src={SettingsImage} />
-          </div>
-        </QuickButton>
+        <UnstyledLink to="#">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <div>
+              <img src={SearchImage} />
+            </div>
+          </QuickButton>
+        </UnstyledLink>
+        <UnstyledLink to="#">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <div>
+              <img src={SettingsImage} />
+            </div>
+          </QuickButton>
+        </UnstyledLink>
         <UnstyledLink to="/faq">
           <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
             <div>

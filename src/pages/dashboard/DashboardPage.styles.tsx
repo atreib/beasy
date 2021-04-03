@@ -86,32 +86,35 @@ export const Summary = styled.div`
   }
 `;
 
-export const QuickButton = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1rem;
-  margin: 0 1rem;
-  background: ${colors.white};
-  border-radius: 50%;
-  width: 10vw;
-  max-width: 5vw;
-  max-height: 10vw;
-  border: 1px solid ${colors.complementaryDarker};
-  color: ${colors.complementaryDarker};
-
-  img {
-    width: 100%;
-    height: 100%;
-    // use this to find a new filter: https://codepen.io/sosuke/pen/Pjoqqp
-    filter: invert(55%) sepia(44%) saturate(1162%) hue-rotate(48deg) brightness(97%) contrast(101%);
-  }
-`;
+export const QuickButton = styled(motion.div)``;
 export const QuickAccess = styled.div`
   display: flex;
   justify-content: center;
+  align-items: stretch;
   margin: 1rem 0;
+
+  ${QuickButton} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 1rem;
+    background: ${colors.white};
+    border-radius: 50%;
+    width: 10vw;
+    max-width: 5vw;
+    max-height: 5vw;
+    border: 1px solid ${colors.complementaryDarker};
+    color: ${colors.complementaryDarker};
+
+    img {
+      width: 100%;
+      height: 100%;
+      // use this to find a new filter: https://codepen.io/sosuke/pen/Pjoqqp
+      filter: invert(55%) sepia(44%) saturate(1162%) hue-rotate(48deg) brightness(97%) contrast(101%);
+    }
+  }
 `;
 
 export const SliderButton = styled(motion.div)``;
@@ -139,14 +142,11 @@ export const Slider = styled.section`
       min-height: 100px;
       padding: 1rem;
       margin-right: 1rem;
-
-      border-radius: 4px;
       background-color: ${colors.white};
-      box-shadow: 0px 2px 2px -2px ${colors.black};
 
       h3 {
         color: ${colors.primary};
-        margin: 1rem 0;
+        margin: 0.5rem 0 1rem 0;
       }
 
       p {
