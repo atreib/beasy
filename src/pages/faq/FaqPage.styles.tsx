@@ -8,8 +8,8 @@ export const Page = styled.div`
 `;
 
 export const Header = styled(motion.header)`
-  padding: 1rem;
-  height: 15vh;
+  padding: 1rem 0 0 0;
+  height: 20vh;
   background-color: ${colors.primary};
   color: ${colors.primaryContrast};
 
@@ -99,6 +99,7 @@ export const Faq = styled.section`
 
       img {
         width: 2rem;
+        max-height: 2rem;
         filter: invert(1);
       }
       h2 {
