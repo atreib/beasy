@@ -69,26 +69,59 @@ export const Summary = styled.div`
   ${WeatherInfo} {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-center;
+    align-items: center;
 
     p {
       margin: 0;
-      margin-top: 0.1rem;
+      margin-top: 0.5rem;
     }
 
     img {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      /* border-radius: 50%; */
+      filter: invert(1);
     }
   }
 `;
 
+export const QuickButton = styled(motion.div)``;
+export const QuickAccess = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  ${QuickButton} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 1rem;
+    background: ${colors.white};
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    /* box-shadow: 0px 2px 2px -2px ${colors.black}; */
+    border: 1px solid ${colors.complementaryDarker};
+    color: ${colors.complementaryDarker};
+
+    img {
+      width: 100%;
+      height: auto;
+      // use this to find a new filter: https://codepen.io/sosuke/pen/Pjoqqp
+      filter: invert(55%) sepia(44%) saturate(1162%) hue-rotate(48deg) brightness(97%) contrast(101%);
+    }
+  }
+`;
+
+export const SliderButton = styled(motion.div)``;
 export const SliderHeader = styled(motion.h2)``;
 export const SliderList = styled.div``;
 export const SliderItem = styled(motion.div)``;
 export const Slider = styled.section`
-  margin: 2rem 0;
+  margin: 1rem 0;
 
   ${SliderHeader} {
     margin: 1rem;
@@ -96,7 +129,6 @@ export const Slider = styled.section`
   }
 
   ${SliderList} {
-    width: 100%;
     overflow: auto;
     padding-bottom: 1rem;
     margin: 0 1rem;
@@ -113,6 +145,36 @@ export const Slider = styled.section`
       border-radius: 4px;
       background-color: ${colors.white};
       box-shadow: 0px 2px 2px -2px ${colors.black};
+
+      h3 {
+        color: ${colors.primary};
+        margin: 1rem 0;
+      }
+
+      p {
+        margin: 0.5rem 0 0 0;
+        font-size: 1rem;
+        line-height: 1.1;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1.1;
+        margin: 0;
+      }
+
+      ${SliderButton} {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: 2px solid ${colors.complementaryDarker};
+        color: ${colors.complementaryDarker};
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+        background: transparent;
+        text-align: center;
+      }
     }
   }
 `;

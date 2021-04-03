@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import RainImage from './../../images/weather/rain.webp';
+import RainImage from './../../images/weather/rainy.svg';
 import MenuImage from './../../images/icons/menu.svg';
 import ExitImage from './../../images/icons/exit.svg';
+import SearchImage from './../../images/icons/search.svg';
+import SettingsImage from './../../images/icons/settings.svg';
+import QuestionImage from './../../images/icons/question.svg';
 import { colors } from '../../utils/theme/colors';
 import { IDirections } from '../../utils/enums/directions';
 import { UnstyledLink } from '../../utils/components/UnstyledLink';
@@ -19,6 +22,9 @@ import {
   SliderHeader,
   SliderItem,
   SliderList,
+  SliderButton,
+  QuickAccess,
+  QuickButton,
 } from './DashboardPage.styles';
 
 export const DashboardPage = () => {
@@ -47,28 +53,63 @@ export const DashboardPage = () => {
           </WeatherInfo>
         </Summary>
       </Header>
+      <QuickAccess>
+        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+          <div>
+            <img src={SearchImage} />
+          </div>
+        </QuickButton>
+        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+          <div>
+            <img src={SettingsImage} />
+          </div>
+        </QuickButton>
+        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+          <div>
+            <img src={QuestionImage} />
+          </div>
+        </QuickButton>
+        <UnstyledLink to="/">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <div>
+              <img src={ExitImage} />
+            </div>
+          </QuickButton>
+        </UnstyledLink>
+      </QuickAccess>
       <Slider>
         <SliderHeader {...fadeIn(0.5)}>Trajetos favoritos</SliderHeader>
         <SliderList>
           <SliderItem {...slideToWithFadeIn(IDirections.FromRight, 0.5)}>
             <h3>Trabalho</h3>
-            <p>Ônibus D73 em 10 minutos</p>
-            <button>Ver mais</button>
+            <p>Próximo ônibus</p>
+            <h2>10 minutos</h2>
+            <SliderButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+              Ver mais
+            </SliderButton>
           </SliderItem>
           <SliderItem {...slideToWithFadeIn(IDirections.FromRight, 1)}>
             <h3>Shopping</h3>
-            <p>Ônibus 831 em 4 minutos</p>
-            <button>Ver mais</button>
+            <p>Próximo ônibus</p>
+            <h2>4 minutos</h2>
+            <SliderButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+              Ver mais
+            </SliderButton>
           </SliderItem>
           <SliderItem {...slideToWithFadeIn(IDirections.FromRight, 1.5)}>
             <h3>Dentista</h3>
-            <p>Ônibus 831 em 4 minutos</p>
-            <button>Ver mais</button>
+            <p>Próximo ônibus</p>
+            <h2>10 minutos</h2>
+            <SliderButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+              Ver mais
+            </SliderButton>
           </SliderItem>
           <SliderItem {...slideToWithFadeIn(IDirections.FromRight, 1.5)}>
-            <h3>Novo</h3>
+            <h3>Novo trajeto</h3>
             <p>Adicionar novo trajeto aos favoritos</p>
-            <button>Adicionar</button>
+            <SliderButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+              Novo
+            </SliderButton>
           </SliderItem>
         </SliderList>
       </Slider>
