@@ -54,24 +54,32 @@ export const DashboardPage = () => {
         </Summary>
       </Header>
       <QuickAccess>
-        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
-          <div>
-            <img src={SearchImage} />
-          </div>
-        </QuickButton>
-        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
-          <div>
-            <img src={SettingsImage} />
-          </div>
-        </QuickButton>
-        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
-          <div>
-            <img src={QuestionImage} />
-          </div>
-        </QuickButton>
-        <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
-          <img src={ExitImage} />
-        </QuickButton>
+        <UnstyledLink to="#">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <div>
+              <img src={SearchImage} />
+            </div>
+          </QuickButton>
+        </UnstyledLink>
+        <UnstyledLink to="#">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <div>
+              <img src={SettingsImage} />
+            </div>
+          </QuickButton>
+        </UnstyledLink>
+        <UnstyledLink to="/faq">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <div>
+              <img src={QuestionImage} />
+            </div>
+          </QuickButton>
+        </UnstyledLink>
+        <UnstyledLink to="/">
+          <QuickButton {...tapEffect(colors.complementaryLighter)} {...fadeIn(1)}>
+            <img src={ExitImage} />
+          </QuickButton>
+        </UnstyledLink>
       </QuickAccess>
       <Slider>
         <SliderHeader {...fadeIn(0.5)}>Trajetos favoritos</SliderHeader>

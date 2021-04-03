@@ -17,4 +17,9 @@ export const AppRoutes: Array<RoutesModel> = [
     component: React.lazy(() => import('./../pages/dashboard/DashboardPage')),
     title: 'Dashboard',
   },
+  {
+    path: '/faq',
+    component: React.lazy(() => import('./../pages/faq/FaqPage')),
+    title: 'Dúvidas',
+  },
 ];
